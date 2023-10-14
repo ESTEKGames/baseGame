@@ -99,7 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4eb54aec29c4ea1b0f855117356444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 0}
+  text: {fileID: 0}
+  positiona: {fileID: 0}
+  gameObject: {fileID: 0}
+  myCharacter: {fileID: 0}
 --- !u!1 &9165687016099777609
 GameObject:
   m_ObjectHideFlags: 0

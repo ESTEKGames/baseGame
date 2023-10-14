@@ -4,25 +4,21 @@ using UnityEngine;
 
 public class SpawnAt : MonoBehaviour
 {
-    public GameObject player;
-    [SerializeField] private Transform transformObst;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject text;
+    public GameObject positiona;
+    public GameObject gameObject;
+    public CharacterController myCharacter;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            other.gameObject.transform.position = transformObst.position;
+            text.SetActive(true);
+            myCharacter.enabled = false;
+            gameObject.transform.position = positiona.transform.position;
+            myCharacter.enabled = true;
         }
+
     }
 }
