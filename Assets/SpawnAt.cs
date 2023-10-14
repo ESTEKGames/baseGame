@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnAt : MonoBehaviour
 {
-    [SerializeField] private Transform transform;
+    public GameObject player;
+    [SerializeField] private Transform transformObst;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class SpawnAt : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.transform.position = transform.position;
+            other.gameObject.transform.position = transformObst.position;
         }
     }
 }
